@@ -6,3 +6,5 @@ spring:
           uri: https://github.com/rahulsharmaindia/springboot-netflix-kafka/
           search-paths:
             - "rm-config-properties/{application}/{profile}"
+  application:
+    name: rm-config-server

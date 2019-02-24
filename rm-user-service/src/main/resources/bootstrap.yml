@@ -1,10 +1,20 @@
-server:
-  port: 8081
 spring:
   application:
     name: rm-user-service
+  profiles:
+    active: dev
   cloud:
     config:
       discovery:
         enabled: true
         service-id: rm-config-server
+      #uri: http://localhost:8888
+logging:
+  level:
+    root: Info
+#eureka:
+#  client:
+#    service-url:
+#      default : http://localhost:8761
+server:
+  port: ${port:8085}

@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rahulsharmaindia/springboot-netflix-kafka/
+          search-paths:
+            - "rm-config-properties/{application}/{profile}"

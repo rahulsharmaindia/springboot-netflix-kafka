@@ -1,0 +1,5 @@
+server:
+  port: ${port:8761} # will run on port provide or at 8761 by default
+spring:
+  application:
+    name: rm-discovery-server

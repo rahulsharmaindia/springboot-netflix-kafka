@@ -1,0 +1,7 @@
+#register-with-eureka and fetch-registry will prevent the registry complaining that 
+#there are no replica nodes for it to connect to. You will need to change these 
+#when going to prod but for local testing it is okay.
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

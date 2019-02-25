@@ -6,7 +6,11 @@ spring:
         spring:
           json:
             trusted:
-              packages: *
+              packages: com.referminds.userservice.entity
+          value:
+            default: com.referminds.userservice.entity.User
+      value:
+        deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     bootstrap-servers: localhost:9092
     topic:
       userCreated: USER_CREATED_TOPIC

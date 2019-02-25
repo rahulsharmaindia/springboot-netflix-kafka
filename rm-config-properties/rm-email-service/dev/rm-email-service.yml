@@ -10,7 +10,6 @@ spring:
     bootstrap-servers: localhost:9092
     topic:
       userCreated: USER_CREATED_TOPIC
-      properties.spring.json.trusted.packages = co.orders.feedme.feed.domain
   h2:
     console:
       enabled: true

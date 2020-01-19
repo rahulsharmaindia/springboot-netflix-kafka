@@ -2,20 +2,12 @@ spring:
   kafka:
     consumer:
       group-id: rm_email_consumer
-      properties:
-        spring:
-          json:
-            trusted:
-              packages: *
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       auto-offset-reset: earliest
       enable-auto-commit: false
-    listener: 
-      ack-mode: MANUAL
     bootstrap-servers: localhost:9092
     topic:
-      userCreated: USER_CREATED_TOPIC
-      
+      userCreated: USER_CREATED_TOPIC 
   h2:
     console:
       enabled: true

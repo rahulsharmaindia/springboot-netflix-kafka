@@ -13,7 +13,8 @@ spring:
         deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       auto-offset-reset: earliest
       enable-auto-commit: false
-    listener: MANUAL
+    listener: 
+      ack-mode: MANUAL
     bootstrap-servers: localhost:9092
     topic:
       userCreated: USER_CREATED_TOPIC

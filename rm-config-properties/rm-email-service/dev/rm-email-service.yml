@@ -7,10 +7,7 @@ spring:
           json:
             trusted:
               packages: *
-          value:
-            default: com.referminds.userservice.entity.User
-      value:
-        deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       auto-offset-reset: earliest
       enable-auto-commit: false
     listener: 

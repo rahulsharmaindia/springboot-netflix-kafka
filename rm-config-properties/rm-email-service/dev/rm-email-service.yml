@@ -6,14 +6,18 @@ spring:
         spring:
           json:
             trusted:
-              packages: com.referminds.userservice.entity
+              packages: *
           value:
             default: com.referminds.userservice.entity.User
       value:
         deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    listener: MANUAL
     bootstrap-servers: localhost:9092
     topic:
       userCreated: USER_CREATED_TOPIC
+      
   h2:
     console:
       enabled: true
